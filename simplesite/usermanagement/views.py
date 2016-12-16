@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Users
 from .forms import PostForm
 
+
 # Create your views here.
 def post_list(request):
     return render(request, 'usermanagement/post_list.html', {})
@@ -11,7 +12,7 @@ def post_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
-           # form = PostForm()
+        form = PostForm()
     else:
     	form = PostForm()
     return render(request, 'usermanagement/post_edit.html', {'form': form})
