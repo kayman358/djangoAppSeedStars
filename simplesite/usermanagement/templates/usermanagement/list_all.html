@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>List all Users</title>
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+
+
+<table style="border: 2px solid black; width: 75%;">
+  <thead  width="350" style="border: 1px solid black ;">
+    <tr style="border: 2px solid black;">
+      <th style="border: 2px solid black; padding: 15px;
+    		text-align: left; background-color: #4CAF50;
+    		color: white;">S/N</th>
+      <th style="border: 2px solid black; padding: 15px;
+    		text-align: left; background-color: #4CAF50;
+    		color: white;">Name</th>
+      <th style="border: 2px solid black; padding: 15px;
+    		text-align: left; background-color: #4CAF50;
+    		color: white;">E-Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% if users %}
+        {% for user in users %}
+      <tr:nth-child(even) style= "background-color: #f2f2f2">
+    <td style="border: 2px solid black; padding: 15px;
+    	text-align: left;">{{user.id}}</td>
+    <td style="border: 2px solid black; padding: 15px;
+    	text-align: left;">{{user.name}}</td>
+    <td style="border: 2px solid black; padding: 15px;
+    	text-align: left;">{{user.email}}</td>
+    </tr>
+   {% endfor %}
+        {% else %}<h1>There are no addresses in the database.</h1>
+        {% endif %}
+  </tbody>
+            <a href="/" style = "background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;">Back to homepage</a>
+
+    <a href="/add" style = "background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;">Add new address</a>
+</table>
+</body>
+</html>

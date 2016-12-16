@@ -1,0 +1,43 @@
+{% extends 'usermanagement/base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/usermanagement.css' %}">
+        <title>Simple Pay Django App</title>
+    </head>
+    <body>
+		<!-- <div class="page-header">
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h1><a href="/">Simple Pay Registration</a></h1>
+        </div>
+
+
+		<div class="content container">
+    <div class="row">
+        <div class="col-md-8">-->
+     
+        {% block content %}
+		<div class="post">
+        <div>
+           
+            <h1><a href="http://localhost:8000/add">Create a New User</a></h1>
+           <p>Click on the above link to add a new user on the App</p>
+        </div>
+
+        <div>
+           
+            <h1><a href="http://localhost:8000/list">View List of Users</a></h1>
+           <p>Click on the link above to view a list of all the registered app users.</p>
+           <p style="color: red; font-size: 20px"><strong><i>Cheers!!!</i></strong></p>
+        </div>
+        </div>
+        {% endblock %}
+       <!-- </div>
+        </div>
+        </div>
+        </div> -->
+    </body>
+</html>
